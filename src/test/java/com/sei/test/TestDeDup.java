@@ -32,16 +32,15 @@ public class TestDeDup {
 	public void testRemoveDup(){
 		final int[] randomIntegers = {1,1,2,3,4,2};
 		DeDup deDup = new DeDup();
-		Integer[] uniqueArr = deDup.removeDups(randomIntegers);
+		int[] uniqueArr = deDup.removeDups(randomIntegers);
 		assertEquals( 4,uniqueArr.length);
 	}
 	
 	@Test
 	public void testnonDuPArray(){
-		
 		final int[] randomIntegers = {1,2,3,4,5};
 		DeDup deDup = new DeDup();
-		Integer[] uniqueArr = deDup.removeDups(randomIntegers);
+		int[] uniqueArr = deDup.removeDups(randomIntegers);
 		assertEquals(randomIntegers.length, uniqueArr.length);
 	}
 	

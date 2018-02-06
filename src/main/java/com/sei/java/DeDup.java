@@ -23,15 +23,15 @@ public class DeDup {
      * @param intArray
      * @return
      */
-    public Integer[] removeDups(int[] intArray) {
+    public int[] removeDups(int[] intArray) {
+        int[] interimArray = new int[intArray.length];
     	if (intArray.length < 2)
-			return null;
+			return interimArray;
         int count = 0;
-        Integer[] interimArray = new Integer[intArray.length];
         for (int i = 0; i < intArray.length; i++) {
             boolean exists = false;
             for (int j = 0; j < interimArray.length; j++) {
-                if (interimArray[j]!=null && interimArray[j] == intArray[i]) {
+                if (interimArray[j] == intArray[i]) {
                     exists = true;
                 }
             }
@@ -40,7 +40,7 @@ public class DeDup {
                 count++;
             }
         }
-        final Integer[] finalArray = new Integer[count];
+        final int[] finalArray = new int[count];
         System.arraycopy(interimArray, 0, finalArray, 0, count);
         return finalArray;
     }
@@ -52,7 +52,7 @@ public class DeDup {
      */
     public int[] removeDuplicates(int[] arr){
     		if (arr.length < 2)
-			return null;
+			return arr;
         HashSet<Integer> set = new HashSet<Integer>();
         final int end = arr.length;
         for(int i = 0; i < end; i++){
@@ -69,7 +69,7 @@ public class DeDup {
     
 	public int[] eliminateDuplicates(int[] randomIntegers) {
 		if (randomIntegers.length < 2)
-			return null;
+			return randomIntegers;
 		int[] unique = new int[randomIntegers.length];    
 	    int n=0;
 	    int[] arrflag = new int[randomIntegers.length];
